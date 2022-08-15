@@ -6,7 +6,7 @@ app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://postgres:ianno2@127.0.0.1:
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 db = SQLAlchemy(app)
 
-class Person(db.Mode):
+class Person(db.Model):
         __tablename__='persons'
         id = db.Column(db.Integer, primary_key=True)
         name = db.Column(db.String(), nullable=False)
